@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Quilt Show Voting Tabulator</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<style>
+	body {
+		font-family: sans-serif;
+	}
+
+	table, th, td {
+		border:1px solid black;
+		border-collapse:collapse;
+	}
+
+	th, td {
+		padding: 3px;
+	}
+
+	tr.bad {
+		background-color: #FF9966;
+	}
+
+	tr.unverified {
+		background-color: #FFFF99;
+	}
+
+	td.mismatch {
+		font-weight: bold;
+		background-color: #FF6600;
+	}
+
+	td.allVotes {
+		font-size: 0.9em;
+	}
+
+	</style>
+</head>
+
+<body>
+
+<%= $out %>
+
+<h2>Data Entry</h2>
+<form method="POST" action=".">
+<textarea rows="30" cols="150" name="data"></textarea><br>
+<input type='submit' name='submit' value='Submit'>
+<br>
+<br>
+<br>
+<br>
+</form>
+
+</body>
+</html>
